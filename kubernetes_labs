@@ -1,0 +1,46 @@
+# LAB 1
+
+## LAB 1.1
+Create Pod
+Pod's name : pod-httpd 
+Image : httpd:latest 
+Label app : httpd_app
+Container's name : httpd-container
+
+cat > pod-httpd.yml << EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-httpd
+  labels:
+    app: httpd_app
+spec:
+  containers:
+  - name: httpd-container
+    image: httpd:latest
+    ports:
+    - containerPort: 80
+EOF
+
+## LAB 1.2
+
+Create Pod
+Pod's name : pod-nginx
+Image : nginx:latest 
+Label app : nginx_app
+Container's name : nginx-container
+
+cat > pod-httpd.yml << EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-httpd
+  labels:
+    app: httpd_app
+spec:
+  containers:
+  - name: httpd-container
+    image: httpd:latest
+    ports:
+    - containerPort: 80
+EOF
