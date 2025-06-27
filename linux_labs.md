@@ -24,3 +24,11 @@ Locate all files (excluding directories) owned by user john within the /home/use
 
     cd /home/usersdata
     sudo find . -type f -user john -exec cp -p --parents {} /blog \;
+
+# LAB 4
+Following security audits, the xFusionCorp Industries security team has rolled out new protocols, including the restriction of direct root SSH login.
+Your task is to disable direct SSH root login on all app servers within the Stratos Datacenter.
+
+vi /etc/ssh/sshd_config
+PermitRootLogin no
+sudo systemctl restart sshd
