@@ -32,3 +32,13 @@ Your task is to disable direct SSH root login on all app servers within the Stra
 vi /etc/ssh/sshd_config
 PermitRootLogin no
 sudo systemctl restart sshd
+
+
+# LAB 5
+
+Check current timezone :
+    timedatectl
+List available timezones :
+    timedatectl list-timezones | grep Aruba
+Set the timezone to America/Aruba:
+    sudo timedatectl set-timezone America/Aruba
